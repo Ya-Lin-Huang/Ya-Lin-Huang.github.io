@@ -1,0 +1,72 @@
+<head>
+  <title>HTML Class</title>
+  <style>
+  body{
+      font-family: Times,serif;
+  	margin: 10;
+  	color: yellow
+  }
+  .mystyle{
+      font-family: Times,serif;
+  	margin: 10;
+  	color: purple;
+  	text-align: right;
+  }</style>
+</head>
+
+<body>
+  <p> hello world ^O^</p>
+  <p style="color: red">Hello World</p>
+  <p style="color: green" align="center">Hello World</p>
+  <div class="mystyle">
+  <p>Hello World Specific</p>
+  <!-------- This is my pic------>
+  <img src="/Users/yalin/Desktop/img1.jpg" alt="Italian Trulli" style="width:250px;height:200px;" align = "left">
+
+  <p> the number will apper below</p>
+  <p id="randomnumb">****</p>
+  <p></p>
+  <button style="width:25%" type="button" onclick="randomnumb()">Pick a Number randomly</a></button>
+
+  <p> Number game</p>
+  <p id="numberGame">****</p>
+  <p></p>
+  <button style="width:25%" type="button" onclick="numberGame()">Number Game</a></button>
+
+  <script>
+  //This is a comment
+  //function for random number
+  function randomnumb(){
+    var numbers = Array(1,2,3,4,5);
+    var randomIndex = Math.floor(Math.random()*numbers.length);
+    var nb = numbers[randomIndex];
+  document.getElementById('randomnumb').innerHTML=nb;
+  }
+  </script>
+
+  <script>
+  //Number Game
+  function numberGame(){
+    var inputuser = prompt("please enter a number:");
+    var numbers = Array(1,2,3,4,5);
+    var randomIndex = Math.floor(Math.random()*numbers.length);
+    var nb = numbers[randomIndex];
+    document.getElementById('numberGame').innerHTML=nb;
+    if (inputuser==nb){
+      alert("You Won!");}
+    else{
+      alert("You Lost!");}
+  }
+  </script>
+
+  <link rel=stylesheet type="text/css" href="CSS.css">
+  <div class="vertical-menu">
+  <a href="#" class="active">Webpage</a>
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  </div>
+
+  <button style="width:25%"><a href="/Users/yalin/Desktop/webpage2.html">webpage2</a></button>
+</body>
